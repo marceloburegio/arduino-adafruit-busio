@@ -16,5 +16,6 @@ tags:
 
 libs:
   - origin: https://github.com/mongoose-os-libs/arduino-compat
+  - origin: https://github.com/mongoose-os-libs/arduino-wire
 
 manifest_version: 2017-09-29
