@@ -59,7 +59,7 @@ class Adafruit_SPIDevice {
 public:
   Adafruit_SPIDevice(int8_t cspin, uint32_t freq = 1000000,
                      BitOrder dataOrder = SPI_BITORDER_MSBFIRST,
-                     uint8_t dataMode = SPI_MODE0, SPIClass *theSPI = &SPI);
+                     uint8_t dataMode = SPI_MODE0, SPIImpl *theSPI = &SPI);
 
   Adafruit_SPIDevice(int8_t cspin, int8_t sck, int8_t miso, int8_t mosi,
                      uint32_t freq = 1000000,
@@ -80,7 +80,7 @@ public:
   void endTransaction(void);
 
 private:
-  SPIClass *_spi;
+  SPIImpl *_spi;
   SPISettings *_spiSetting;
   uint32_t _freq;
   BitOrder _dataOrder;
