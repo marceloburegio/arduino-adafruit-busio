@@ -14,7 +14,7 @@
  */
 Adafruit_SPIDevice::Adafruit_SPIDevice(int8_t cspin, uint32_t freq,
                                        BitOrder dataOrder, uint8_t dataMode,
-                                       SPIClass *theSPI) {
+                                       SPIImpl *theSPI) {
   _cs = cspin;
   _sck = _mosi = _miso = -1;
   _spi = theSPI;
